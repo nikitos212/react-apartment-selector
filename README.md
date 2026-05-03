@@ -1,16 +1,47 @@
-# React + Vite
+# Apartment Selector
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React-приложение для выбора квартир по домам и подъездам. Интерфейс сверстан по Figma-макету: четыре таблицы домов, кнопки очистки и добавления, а также два окна выбора подъезда и квартир соответственно.
 
-Currently, two official plugins are available:
+## Что реализовано
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- 4 таблицы домов с колонками `Номер подъезда` и `Номер квартиры`.
+- Открытие окна выбора подъезда по кнопке с плюсом.
+- Открытие окна выбора квартир после выбора подъезда.
+- Множественный выбор квартир в одном или разных подъездах.
+- Добавление выбранных квартир в таблицу по кнопке `Добавить`.
+- Очистка данных отдельной таблицы по кнопке с иконкой корзины.
+- Клавиатурная навигация: `Tab`, стрелки, `Enter`, `Escape`, `Ctrl + Enter`.
+- Адаптивная раскладка для экранов меньше Figma-макета.
+- Сохранение выбранных квартир в `localStorage`, чтобы данные не пропадали после перезагрузки страницы.
 
-## React Compiler
+## Технологии
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- React Hooks
+- SCSS
+- Vite
 
-## Expanding the ESLint configuration
+## Структура
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- `src/components` - UI-компоненты приложения.
+- `src/hooks` - логика выбора квартир и клавиатурной навигации.
+- `src/constants` - списки домов, подъездов и квартир.
+- `src/styles` - глобальные стили.
+
+## Запуск
+
+```bash
+npm install
+npm run dev
+```
+
+Проверка сборки и линта:
+
+```bash
+npm run lint
+npm run build
+```
+
+## Дополнительная фича
+
+Выбор квартир сохраняется в `localStorage`. После обновления страницы таблицы восстанавливаются в прежнем состоянии.
