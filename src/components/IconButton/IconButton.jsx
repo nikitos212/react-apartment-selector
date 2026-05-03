@@ -8,7 +8,12 @@ const ICONS = {
     </svg>
   ),
   trash: (
-    <img src="/trash.png" alt="" aria-hidden="true" draggable="false" />
+    <img
+      src={`${import.meta.env.BASE_URL}trash.png`}
+      alt=""
+      aria-hidden="true"
+      draggable="false"
+    />
   ),
   close: (
     <svg viewBox="0 0 20 20" aria-hidden="true" focusable="false">
