@@ -51,8 +51,8 @@ function getSavedSelections() {
 function saveSelections(houseSelections) {
   try {
     window.localStorage.setItem(STORAGE_KEY, JSON.stringify(houseSelections))
-  } catch {
-    // localStorage can be unavailable in private or restricted browser modes.
+  } catch { 
+    /* empty */ 
   }
 }
 
