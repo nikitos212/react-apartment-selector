@@ -1,0 +1,76 @@
+.app {
+  min-width: 320px;
+  min-height: 100vh;
+  background: #f1f2f4;
+}
+
+.app__workspace {
+  position: relative;
+  width: 100%;
+  max-width: 1920px;
+  min-height: 1080px;
+  margin: 0 auto;
+}
+
+.app__tables {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+  width: 756px;
+  gap: 40px;
+}
+
+.app__selectors {
+  position: absolute;
+  top: 340px;
+  left: 816px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+@media (max-width: 1280px) {
+  .app__workspace {
+    min-height: 100vh;
+    padding: 40px;
+  }
+
+  .app__tables,
+  .app__selectors {
+    position: static;
+  }
+
+  .app__selectors {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 860px) {
+  .app__workspace {
+    padding: 24px;
+  }
+
+  .app__tables {
+    width: 100%;
+    gap: 32px;
+  }
+
+  .app__selectors {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 520px) {
+  .app__workspace {
+    padding: 16px;
+  }
+
+  .app__tables {
+    gap: 24px;
+  }
+}
