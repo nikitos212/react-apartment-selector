@@ -1,0 +1,30 @@
+.selection-option {
+  display: flex;
+  align-items: center;
+  width: 192px;
+  height: 24px;
+  padding: 0 8px;
+  color: #6d7885;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+  background: #e4e5e8;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  cursor: pointer;
+
+  &:hover {
+    color: #353d4b;
+  }
+
+  &:focus-visible {
+    outline: 2px solid #225cb5;
+    outline-offset: 1px;
+  }
+}
+
+.selection-option--selected {
+  color: #353d4b;
+  border-color: #4587ed;
+}

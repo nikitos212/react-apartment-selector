@@ -1,0 +1,63 @@
+.icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  border: 0;
+  cursor: pointer;
+
+  svg {
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.5px;
+  }
+
+  &:focus-visible {
+    outline: 2px solid #225cb5;
+    outline-offset: 2px;
+  }
+
+  &:disabled {
+    cursor: default;
+  }
+}
+
+.icon-button--primary {
+  width: 28px;
+  height: 28px;
+  padding: 4px;
+  color: #ffffff;
+  background: #4587ed;
+  border-radius: 6px;
+
+  &:hover {
+    background: #3573d2;
+  }
+
+  &:active {
+    background: #225cb5;
+  }
+
+  &:disabled {
+    color: #d2dff3;
+    background: #abc7f2;
+  }
+}
+
+.icon-button--ghost {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  color: #b8c1cc;
+  background: transparent;
+  border-radius: 4px;
+
+  &:hover,
+  &:active {
+    color: #ffffff;
+  }
+}
